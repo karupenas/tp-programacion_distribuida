@@ -16,7 +16,7 @@ const {
  */
 
 /**
- * GET /socios/
+ * GET /socio/
  * @summary Endpoint para obtener todos los socios
  * @returns {array<Socio>} 200 - success response
  * @returns {object} 500 - error response
@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
 });
 
 /**
- * POST /socios/
+ * POST /socio/
  * @summary Endpoint para obtener crear un nuevo socio
  * @param {Socio} request.body.required - Socio info
  * @returns {Socio} 200 - success response
@@ -47,7 +47,7 @@ router.post("/", async (req, res) => {
 });
 
 /**
- * PUT /socios/:id
+ * PUT /socio/:id
  * @summary Endpoint para modificar un nuevo socio
  * @param  {number} id.query.required - Socio id
  * @param {Socio} request.body.required - Socio info
@@ -64,7 +64,7 @@ router.put("/:id", async (req, res) => {
 });
 
 /**
- * DELETE /socios/:id
+ * DELETE /socio/:id
  * @summary Endpoint para eliminar un socio
  * @param {number} id.query.required - Socio id
  * @returns {object} 200 - success response

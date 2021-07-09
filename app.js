@@ -39,6 +39,7 @@ var sociosRouter = require("./src/routes/sociosController");
 var autorRouter = require("./src/routes/autorController");
 var generoRouter = require("./src/routes/generoController");
 var editorialRouter = require("./src/routes/editorialController");
+var prestamoRouter = require("./src/routes/prestamoController");
 var app = express();
 
 app.use(logger("dev"));
@@ -48,12 +49,12 @@ app.use(cookieParser());
 
 expressJSDocSwagger(app)(options);
 
-app.use("/libros", librosRouter);
-app.use("/socios", sociosRouter);
+app.use("/libro", librosRouter);
+app.use("/socio", sociosRouter);
 app.use("/autor", autorRouter);
 app.use("/genero", generoRouter);
 app.use("/editorial", editorialRouter);
-
+app.use("/prestamo", prestamoRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

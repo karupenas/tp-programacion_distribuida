@@ -18,7 +18,7 @@ const {
  */
 
 /**
- * GET /libros/
+ * GET /libro/
  * @summary Endpoint para obtener todos los libros
  * @returns {array<Libro>} 200 - success response
  * @returns {object} 500 - error response
@@ -33,7 +33,7 @@ router.get("/", async (req, res) => {
 });
 
 /**
- * POST /libros/
+ * POST /libro/
  * @summary Endpoint para obtener crear un nuevo libro
  * @param {Libro} request.body.required - Libro info
  * @returns {Libro} 200 - success response
@@ -49,7 +49,7 @@ router.post("/", async (req, res) => {
 });
 
 /**
- * PUT /libros/:id
+ * PUT /libro/:id
  * @summary Endpoint para modificar un nuevo libro
  * @param  {number} id.query.required - Libro id
  * @param {Libro} request.body.required - Libro info
@@ -66,7 +66,7 @@ router.put("/:id", async (req, res) => {
 });
 
 /**
- * DELETE /libros/:id
+ * DELETE /libro/:id
  * @summary Endpoint para eliminar un libro
  * @param {number} id.query.required - Libro id
  * @returns {object} 200 - success response
